@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'CCMPopup', :exclusive => true do
+  pod "CCMPopup", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "CCMPopup", :path => "../"
+
+  
+end
