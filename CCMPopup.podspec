@@ -9,19 +9,18 @@
 
 Pod::Spec.new do |s|
   s.name             = "CCMPopup"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of CCMPopup."
+  s.version          = "1.0.0"
+  s.summary          = "The CCMPopup is a nice controller transition animation that makes the view pop from the middle of the screen"
   s.description      = <<-DESC
-                       An optional longer description of CCMPopup
+                        The CCMPopup is a nice controller transition animation that makes the view pop from the middle of the screen. It can be easily used with a segue right from storyboard, or with apples `presentViewController:animated:completion:` method, and dismissed just as easily with the `dismissViewControllerAnimated:completion:` method.
 
                        * Markdown format.
-                       * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/CCMPopup"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
+  s.homepage         = "https://github.com/cacmartinez/CCMPopup"
+  s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.license          = 'APACHE 2.0'
   s.author           = { "Carlos Compean" => "ccompean@icalialabs.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/CCMPopup.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/cacmartinez/CCMPopup.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
