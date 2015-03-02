@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
                         The CCMPopup is a nice controller transition animation that makes the view pop from the middle of the screen. It can be easily used with a segue right from storyboard, or with apples `presentViewController:animated:completion:` method, and dismissed just as easily with the `dismissViewControllerAnimated:completion:` method.
                        DESC
   s.homepage         = "https://github.com/cacmartinez/CCMPopup"
-  s.screenshots     = "www.example.com/screenshots_1"
+  s.screenshots     = "https://github.com/cacmartinez/CCMPopup/blob/master/Screenshots/screenshot.PNG"
   s.license          = 'APACHE 2.0'
   s.author           = { "Carlos Compean" => "ccompean@icalialabs.com" }
   s.source           = { :git => "https://github.com/cacmartinez/CCMPopup.git", :tag => 'v1.0.0'}
