@@ -52,6 +52,22 @@ CCMPopup is an easy to use transition animation, that makes a window pop from th
 
 * You can also use an unwind segue method
 
+# Customization
+
+CCMPopup has five properties for presentation customization:
+
+* *destinationBound:* This property lets you define the size of the destination controller.
+
+* *backgroundBlurRadius:* The blur radius for the background. Default is 5.
+
+* *backgroundViewColor:* The background adds a view for custom tint color, this property should be combined with backgroundViewAlpha to let the background show. This property is ignored if backgroundViewAlpha is 0. Default is nil.
+
+* *backgroundViewAlpha:* The alpha property that is to be applied to the background colored view. Default is 0.5
+
+* *dismissableByTouchingBackground:* If set to YES, lets the presented view controller get dismissed if background is touched. Default is NO.
+
+All of these properties are to be assigned to the segue, or the popupTransitioning depending of the implementation method
+
 # Requirements
 
 iOS 7.0 or up
