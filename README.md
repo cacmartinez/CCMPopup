@@ -1,28 +1,85 @@
 # CCMPopup
+===========
 
-[![CI Status](http://img.shields.io/travis/Carlos Compean/CCMPopup.svg?style=flat)](https://travis-ci.org/Carlos Compean/CCMPopup)
+[![License APACHE](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/cacmartinez/CCMPopup/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/release/cacmartinez/CCMPopup.svg)](https://github.com/cacmartinez/CCMPopup)
+#[![CI Status](http://img.shields.io/travis/Carlos Compean/CCMPopup.svg?style=flat)](https://travis-ci.org/Carlos Compean/CCMPopup)
 [![Version](https://img.shields.io/cocoapods/v/CCMPopup.svg?style=flat)](http://cocoadocs.org/docsets/CCMPopup)
 [![License](https://img.shields.io/cocoapods/l/CCMPopup.svg?style=flat)](http://cocoadocs.org/docsets/CCMPopup)
 [![Platform](https://img.shields.io/cocoapods/p/CCMPopup.svg?style=flat)](http://cocoadocs.org/docsets/CCMPopup)
 
-## Usage
+CCMPopup is an easy to use transition animation, that makes a window pop from the center of the presenting controller. It's is customizable and it comes with it's own segue for even easier use with storyboards.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![CCMPopup](https://github.com/cacmartinez/CCMPopup/blob/master/Screenshots/demoGif.gif)
 
-## Requirements
+==========
 
-## Installation
+# Usage
+
+## Presenting
+
+### With segue
+
+1. First Step of using the CCMPopup with segues is as simple as clicking and dragging:
+![CCMPopup](https://github.com/cacmartinez/CCMPopup/blob/master/Screenshots/usingSeguesDemo.gif)
+
+2. Second step is to import the CCMPopupSegue in the source controller: `#import <CCMPopup/CCMPopupSegue.h>`
+
+3. Then you have to implement the source controller's `prepareForSegue:sender:` method, and cast the segue to a `CCMPopupSegue` in order to call the `destinationBounds` property and be able to set the size of the destination controller (x and y origin are ignored):
+
+```Objective-C
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue isKindOfClass:[CCMPopupSegue class]]){
+	CCMPopupSegue *popupSegue = (CCMPopupSegue *)segue;
+        popupSegue.destinationBounds = CGRectMake(0, 0, 50, 50);
+    }
+}
+```
+
+### With code:
+
+1. First Step of using the CCMPopup with code is to import the CCMPopupTransitioning: `#import <CCMPopup/CCMPopupTransitioning.h>`
+
+2. Then in your code you get the shared instance of CCMPopupTransitioning, and assign the destinationBounds, the presentingController, and the presentedController
+
+```Objective-C
+    CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];
+    popup.destinationBounds = CGRectMake(0, 0, 300, 400);
+    popup.presentedController = presentingController;
+    popup.presentingController = self;
+    [self presentViewController:presentingController animated:YES completion:nil];
+```
+
+## Dismissing
+
+* To dismiss call the presented controller's `dismissViewControllerAnimated:completion:`
+
+* You can also use an unwind segue method
+
+# Requirements
+
+iOS 7.0 or up
+
+# Installation
+
+## With CocoaPods
 
 CCMPopup is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
     pod "CCMPopup"
 
-## Author
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Files
+
+Download or clone the repo, and then add the folder CCMPopup to your proyect
+
+# Author
 
 Carlos Compean, ccompean@icalialabs.com
 
-## License
+# License
 
-CCMPopup is available under the MIT license. See the LICENSE file for more info.
+CCMPopup is available under the Apache 2.0 license. See the LICENSE file for more info.
 

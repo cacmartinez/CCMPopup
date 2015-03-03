@@ -17,45 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMY-Nh-HVn" customClass="CCMBorderView">
-                                <rect key="frame" x="175" y="265" width="250" height="70"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBE-94-yAP">
-                                        <rect key="frame" x="0.0" y="-6" width="250" height="76"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
-                                        <state key="normal" title="Show Popup">
-                                            <color key="titleColor" red="0.090196078430000007" green="0.21176470589999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="8Fk-4f-KLb" kind="custom" customClass="CCMPopupSegue" id="KNO-3t-Tnn"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.98987683070399779" green="0.98987683070399779" blue="0.98987683070399779" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="PBE-94-yAP" secondAttribute="centerY" constant="3" id="44z-8m-0lm"/>
-                                    <constraint firstItem="PBE-94-yAP" firstAttribute="width" secondItem="PMY-Nh-HVn" secondAttribute="width" id="CbS-B3-n81"/>
-                                    <constraint firstAttribute="centerX" secondItem="PBE-94-yAP" secondAttribute="centerX" id="Iij-Em-Ckm"/>
-                                    <constraint firstItem="PBE-94-yAP" firstAttribute="height" secondItem="PMY-Nh-HVn" secondAttribute="height" constant="6" id="NJ6-Am-Hp7"/>
-                                    <constraint firstAttribute="height" constant="70" id="W4r-JP-cKi"/>
-                                    <constraint firstAttribute="width" constant="250" id="by4-yy-wxw"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="tlCornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="brCornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="trCornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="blCornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bullseye" translatesAutoresizingMaskIntoConstraints="NO" id="4aB-wF-5bx">
                                 <rect key="frame" x="-160" y="-155" width="341" height="334"/>
                                 <color key="tintColor" red="0.39158055489999999" green="0.5615796233" blue="0.675719246" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,14 +35,103 @@
                                     <constraint firstAttribute="height" constant="435" id="bzt-Yf-x65"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMY-Nh-HVn" customClass="CCMBorderView">
+                                <rect key="frame" x="165" y="190" width="270" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBE-94-yAP">
+                                        <rect key="frame" x="0.0" y="-6" width="270" height="76"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                        <state key="normal" title="Popup With Segue">
+                                            <color key="titleColor" red="0.090196078430000007" green="0.21176470589999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="8Fk-4f-KLb" kind="custom" customClass="CCMPopupSegue" id="cBa-Z8-9J1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98987683070399779" green="0.98987683070399779" blue="0.98987683070399779" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="PBE-94-yAP" secondAttribute="centerY" constant="3" id="44z-8m-0lm"/>
+                                    <constraint firstItem="PBE-94-yAP" firstAttribute="width" secondItem="PMY-Nh-HVn" secondAttribute="width" id="CbS-B3-n81"/>
+                                    <constraint firstAttribute="centerX" secondItem="PBE-94-yAP" secondAttribute="centerX" id="Iij-Em-Ckm"/>
+                                    <constraint firstItem="PBE-94-yAP" firstAttribute="height" secondItem="PMY-Nh-HVn" secondAttribute="height" constant="6" id="NJ6-Am-Hp7"/>
+                                    <constraint firstAttribute="height" constant="70" id="W4r-JP-cKi"/>
+                                    <constraint firstAttribute="width" constant="270" id="by4-yy-wxw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tlCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="brCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trCornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blCornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVq-K6-ox7" customClass="CCMBorderView">
+                                <rect key="frame" x="165" y="290" width="270" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUW-hf-Xic">
+                                        <rect key="frame" x="0.0" y="-6" width="270" height="76"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                        <state key="normal" title="Popup With Code">
+                                            <color key="titleColor" red="0.090196078430000007" green="0.21176470589999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressedPopupWithCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WUE-aW-LcS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98987683069999999" green="0.98987683069999999" blue="0.98987683069999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="XUW-hf-Xic" firstAttribute="height" secondItem="sVq-K6-ox7" secondAttribute="height" constant="6" id="UdH-cC-3nM"/>
+                                    <constraint firstAttribute="centerY" secondItem="XUW-hf-Xic" secondAttribute="centerY" constant="3" id="cxC-Dl-Cdi"/>
+                                    <constraint firstAttribute="height" constant="70" id="hNW-hn-j90"/>
+                                    <constraint firstAttribute="centerX" secondItem="XUW-hf-Xic" secondAttribute="centerX" id="qnl-tk-ROZ"/>
+                                    <constraint firstAttribute="width" constant="350" id="t48-vT-sRS"/>
+                                    <constraint firstItem="XUW-hf-Xic" firstAttribute="width" secondItem="sVq-K6-ox7" secondAttribute="width" id="xya-4e-bXR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tlCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="brCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trCornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blCornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hNW-hn-j90"/>
+                                        <exclude reference="t48-vT-sRS"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1739223187133723" green="0.24754487492906382" blue="0.29685433201058198" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4aB-wF-5bx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-155" id="6fu-Vb-yyT"/>
                             <constraint firstItem="4aB-wF-5bx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-176" id="InO-TF-xeF"/>
+                            <constraint firstItem="PMY-Nh-HVn" firstAttribute="width" secondItem="sVq-K6-ox7" secondAttribute="width" id="Q9K-Mz-H3o"/>
                             <constraint firstAttribute="centerX" secondItem="PMY-Nh-HVn" secondAttribute="centerX" id="Vfd-T4-xMM"/>
+                            <constraint firstItem="sVq-K6-ox7" firstAttribute="top" secondItem="PMY-Nh-HVn" secondAttribute="bottom" constant="30" id="W1d-fr-qLr"/>
+                            <constraint firstItem="PMY-Nh-HVn" firstAttribute="height" secondItem="sVq-K6-ox7" secondAttribute="height" id="iWj-EH-Ih7"/>
                             <constraint firstAttribute="bottomMargin" secondItem="bh6-w7-43k" secondAttribute="bottom" constant="-261" id="kBJ-Cc-Jur"/>
-                            <constraint firstAttribute="centerY" secondItem="PMY-Nh-HVn" secondAttribute="centerY" id="mqr-7I-bwU"/>
+                            <constraint firstAttribute="centerX" secondItem="sVq-K6-ox7" secondAttribute="centerX" id="lco-tC-7yG"/>
+                            <constraint firstAttribute="centerY" secondItem="PMY-Nh-HVn" secondAttribute="centerY" constant="75" id="mqr-7I-bwU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bh6-w7-43k" secondAttribute="trailing" constant="-271" id="psj-1c-gdO"/>
                         </constraints>
                     </view>
@@ -89,6 +139,7 @@
                         <outlet property="buttonContainerView" destination="PMY-Nh-HVn" id="Fen-Up-TOq"/>
                         <outlet property="imageViewBotton" destination="bh6-w7-43k" id="Ptg-8T-UMC"/>
                         <outlet property="imageViewTop" destination="4aB-wF-5bx" id="BCD-Sm-Mhw"/>
+                        <outlet property="secondButtonContainerView" destination="sVq-K6-ox7" id="HuN-SJ-V7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +148,7 @@
         <!--View Controller-->
         <scene sceneID="Zed-Lw-vOX">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8Fk-4f-KLb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="popupController" automaticallyAdjustsScrollViewInsets="NO" id="8Fk-4f-KLb" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eTz-TY-kVF"/>
                         <viewControllerLayoutGuide type="bottom" id="5To-Yu-5w8"/>
@@ -171,7 +222,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="987" y="553"/>
+            <point key="canvasLocation" x="1232" y="499"/>
         </scene>
     </scenes>
     <resources>

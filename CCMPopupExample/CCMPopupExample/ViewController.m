@@ -9,11 +9,13 @@
 #import "ViewController.h"
 #import "CCMPopupSegue.h"
 #import "CCMBorderView.h"
+#import "CCMPopupTransitioning.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewTop;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewBotton;
 @property (weak, nonatomic) IBOutlet CCMBorderView *buttonContainerView;
+@property (weak, nonatomic) IBOutlet CCMBorderView *secondButtonContainerView;
 
 @end
 
@@ -35,6 +37,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)pressedPopupWithCode:(UIButton *)sender {
+    UIViewController *presentingController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"popupController"];
+    
+    CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];
+    popup.destinationBounds = CGRectMake(0, 0, 300, 400);
+    popup.presentedController = presentingController;
+    popup.presentingController = self;
+    [self presentViewController:presentingController animated:YES completion:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
