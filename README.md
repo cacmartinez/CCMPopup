@@ -1,9 +1,7 @@
 # CCMPopup
-===========
 
 [![License APACHE](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/cacmartinez/CCMPopup/blob/master/LICENSE)
 [![Release](https://img.shields.io/github/release/cacmartinez/CCMPopup.svg)](https://github.com/cacmartinez/CCMPopup)
-#[![CI Status](http://img.shields.io/travis/Carlos Compean/CCMPopup.svg?style=flat)](https://travis-ci.org/Carlos Compean/CCMPopup)
 [![Version](https://img.shields.io/cocoapods/v/CCMPopup.svg?style=flat)](http://cocoadocs.org/docsets/CCMPopup)
 [![License](https://img.shields.io/cocoapods/l/CCMPopup.svg?style=flat)](http://cocoadocs.org/docsets/CCMPopup)
 [![Platform](https://img.shields.io/cocoapods/p/CCMPopup.svg?style=flat)](http://cocoadocs.org/docsets/CCMPopup)
@@ -11,8 +9,6 @@
 CCMPopup is an easy to use transition animation, that makes a window pop from the center of the presenting controller. It's is customizable and it comes with it's own segue for even easier use with storyboards.
 
 ![CCMPopup](https://github.com/cacmartinez/CCMPopup/blob/master/Screenshots/demoGif.gif)
-
-==========
 
 # Usage
 
