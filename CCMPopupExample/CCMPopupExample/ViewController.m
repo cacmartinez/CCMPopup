@@ -35,10 +35,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation) && UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation]) && self.popupController.view.bounds.size.height > [UIScreen mainScreen].bounds.size.width) {
-        self.popupController.view.bounds = CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.width-20) * .75, [UIScreen mainScreen].bounds.size.width-20);
-    } else if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    if (size.height < 420) {
+        self.popupController.view.bounds = CGRectMake(0, 0, (size.height-20) * .75, size.height-20);
+    } else {
         self.popupController.view.bounds = CGRectMake(0, 0, 300, 400);
     }
 }
@@ -65,7 +65,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     CCMPopupSegue *popupSegue = (CCMPopupSegue *)segue;
-    if (UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation]) && UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+    if (self.view.bounds.size.height < 420) {
         popupSegue.destinationBounds = CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.height-20) * .75, [UIScreen mainScreen].bounds.size.height-20);
     } else {
         popupSegue.destinationBounds = CGRectMake(0, 0, 300, 400);
