@@ -59,7 +59,7 @@
     UIViewController *presentingController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"popupController"];
     
     CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];
-    if (UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+    if (self.view.bounds.size.height < 420) {
         popup.destinationBounds = CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.height-20) * .75, [UIScreen mainScreen].bounds.size.height-20);
     } else {
         popup.destinationBounds = CGRectMake(0, 0, 300, 400);
