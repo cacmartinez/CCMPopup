@@ -36,10 +36,17 @@
 }
 
 -(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    [self.view layoutIfNeeded];
     if (size.height < 420) {
-        self.popupController.view.bounds = CGRectMake(0, 0, (size.height-20) * .75, size.height-20);
+        [UIView animateWithDuration:[coordinator transitionDuration] animations:^{
+            self.popupController.view.bounds = CGRectMake(0, 0, (size.height-20) * .75, size.height-20);
+            [self.view layoutIfNeeded];
+        }];
     } else {
-        self.popupController.view.bounds = CGRectMake(0, 0, 300, 400);
+        [UIView animateWithDuration:[coordinator transitionDuration] animations:^{
+            self.popupController.view.bounds = CGRectMake(0, 0, 300, 400);
+            [self.view layoutIfNeeded];
+        }];
     }
 }
 
