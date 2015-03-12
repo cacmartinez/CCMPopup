@@ -41,6 +41,7 @@
     delegate.backgroundBlurRadius = self.backgroundBlurRadius;
     delegate.backgroundViewAlpha = self.backgroundViewAlpha;
     delegate.backgroundViewColor = self.backgroundViewColor;
+    delegate.dynamic = self.dynamic;
     delegate.dismissableByTouchingBackground = self.dismissableByTouchingBackground;
     delegate.presentedController = destination;
     delegate.presentingController = source;

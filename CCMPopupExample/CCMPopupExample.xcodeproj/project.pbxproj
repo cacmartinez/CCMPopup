@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771A5A661AB169F200D6197D /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 771A5A651AB169F200D6197D /* FXBlurView.m */; };
 		778685CA1A9FCE8900CBEE6F /* CCMCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 778685C91A9FCE8900CBEE6F /* CCMCustomAnimation.m */; };
 		778685D11A9FDAE500CBEE6F /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 778685CD1A9FDAE500CBEE6F /* UIImage+ImageEffects.m */; };
 		778685D21A9FDAE500CBEE6F /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 778685D01A9FDAE500CBEE6F /* UIImage+screenshot.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		771A5A641AB169F200D6197D /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = ../../CCMPopup/FXBlurView/FXBlurView.h; sourceTree = "<group>"; };
+		771A5A651AB169F200D6197D /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = ../../CCMPopup/FXBlurView/FXBlurView.m; sourceTree = "<group>"; };
 		778685C81A9FCE8900CBEE6F /* CCMCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCMCustomAnimation.h; path = ../../CCMPopup/CCMCustomAnimation.h; sourceTree = "<group>"; };
 		778685C91A9FCE8900CBEE6F /* CCMCustomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCMCustomAnimation.m; path = ../../CCMPopup/CCMCustomAnimation.m; sourceTree = "<group>"; };
 		778685CC1A9FDAE500CBEE6F /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -84,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		771A5A671AB169F700D6197D /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				771A5A641AB169F200D6197D /* FXBlurView.h */,
+				771A5A651AB169F200D6197D /* FXBlurView.m */,
+			);
+			name = FXBlurView;
+			sourceTree = "<group>";
+		};
 		778685CB1A9FDAE500CBEE6F /* UIImage+ImageEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +180,7 @@
 		77FA23F11A9FC8EE004AC153 /* CCMPopup */ = {
 			isa = PBXGroup;
 			children = (
+				771A5A671AB169F700D6197D /* FXBlurView */,
 				778685CB1A9FDAE500CBEE6F /* UIImage+ImageEffects */,
 				778685CE1A9FDAE500CBEE6F /* UIImage+screenshot */,
 				778685C81A9FCE8900CBEE6F /* CCMCustomAnimation.h */,
@@ -242,6 +255,7 @@
 				TargetAttributes = {
 					77FA23C71A9FC8B4004AC153 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = TAGM86AK24;
 					};
 					77FA23E01A9FC8B4004AC153 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -298,6 +312,7 @@
 				77FA23FC1A9FC906004AC153 /* CCMPopupTransitioning.m in Sources */,
 				77FA23FD1A9FC906004AC153 /* UIViewController+CCMPopupAnimation.m in Sources */,
 				778685CA1A9FCE8900CBEE6F /* CCMCustomAnimation.m in Sources */,
+				771A5A661AB169F200D6197D /* FXBlurView.m in Sources */,
 				77FA23FA1A9FC906004AC153 /* CCMPopupAnimation.m in Sources */,
 				77FA23D11A9FC8B4004AC153 /* AppDelegate.m in Sources */,
 				778685D11A9FDAE500CBEE6F /* UIImage+ImageEffects.m in Sources */,
@@ -427,9 +442,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CCMPopupExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -437,9 +455,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CCMPopupExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

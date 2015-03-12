@@ -19,8 +19,9 @@
 #import "UIImage+screenshot.h"
 #import "UIImage+ImageEffects.h"
 #import "UIViewController+CCMPopupAnimation.h"
+#import "FXBlurView.h"
 
-static UIView *blurredBackground;
+static FXBlurView *blurredBackground;
 static UIView *touchView;
 
 @interface CCMPopupAnimation ()
@@ -52,12 +53,19 @@ static UIView *touchView;
     CGRect endBounds = [popupTransitioning destinationBounds];
     
     toViewController.view.frame = endBounds;
+    toViewController.view.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     
     if (popupTransitioning.backgroundBlurRadius != 0) {
 //        blurredBackground = [[UIImageView alloc] initWithImage:[[UIImage screenshot] applyBlurWithRadius:5.0 tintColor:[UIColor colorWithRed:20/255.0 green:36/255.0 blue:47/255.0 alpha:0.6] saturationDeltaFactor:1.0 maskImage:nil]];
-        blurredBackground = [[UIImageView alloc] initWithImage:[[UIImage screenshot] applyBlurWithRadius:popupTransitioning.backgroundBlurRadius tintColor:nil saturationDeltaFactor:1.0 maskImage:nil]];
+        //blurredBackground = [[UIImageView alloc] initWithImage:[[UIImage screenshot] applyBlurWithRadius:popupTransitioning.backgroundBlurRadius tintColor:nil saturationDeltaFactor:1.0 maskImage:nil]];
+        blurredBackground = [[FXBlurView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        blurredBackground.tintColor = [UIColor clearColor];
+        blurredBackground.blurRadius = popupTransitioning.backgroundBlurRadius;
+        blurredBackground.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        blurredBackground.dynamic = popupTransitioning.dynamic;
     }
     touchView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    touchView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     if (popupTransitioning.backgroundViewAlpha != 0) {
         touchView.backgroundColor = popupTransitioning.backgroundViewColor;
         touchView.alpha = popupTransitioning.backgroundViewAlpha;

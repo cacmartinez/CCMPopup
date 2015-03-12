@@ -22,6 +22,7 @@
 @property CGFloat backgroundBlurRadius;
 @property UIColor *backgroundViewColor;
 @property CGFloat backgroundViewAlpha;
+@property BOOL dynamic;
 @property BOOL dismissableByTouchingBackground;
 
 @end
