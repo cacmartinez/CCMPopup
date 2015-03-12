@@ -66,6 +66,8 @@ CCMPopup has five properties for presentation customization:
 
 * *dismissableByTouchingBackground:* If set to YES, lets the presented view controller get dismissed if background is touched. Default is NO.
 
+* *dynamic:* If set to YES, the blur live renders the background. Default is NO.
+
 All of these properties are to be assigned to the segue, or the popupTransitioning depending of the implementation method
 
 # Requirements
