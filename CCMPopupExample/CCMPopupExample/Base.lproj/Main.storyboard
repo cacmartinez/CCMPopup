@@ -178,7 +178,7 @@
                                     <outletCollection property="gestureRecognizers" destination="uYP-fc-dud" appends="YES" id="rpj-64-BWH"/>
                                 </connections>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thumbs_up" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-Si-M4n">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Thumbs_up" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-Si-M4n">
                                 <rect key="frame" x="43" y="95.5" width="214" height="266.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uBH-Si-M4n" secondAttribute="height" multiplier="53:66" id="2qc-bh-j2N"/>

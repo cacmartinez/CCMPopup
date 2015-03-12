@@ -65,7 +65,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     CCMPopupSegue *popupSegue = (CCMPopupSegue *)segue;
-    if (UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+    if (UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation]) && UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         popupSegue.destinationBounds = CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.height-20) * .75, [UIScreen mainScreen].bounds.size.height-20);
     } else {
         popupSegue.destinationBounds = CGRectMake(0, 0, 300, 400);
